@@ -1,0 +1,12 @@
+.navbar {
+}
+
+.navbar__tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.navbar__tab {
+  cursor: pointer;
+}

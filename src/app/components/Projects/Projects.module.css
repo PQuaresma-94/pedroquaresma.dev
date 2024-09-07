@@ -1,0 +1,85 @@
+.projects {
+  padding: 3rem 0;
+  background-color: hsl(210, 10%, 15%);
+  color: hsl(45, 20%, 95%);
+  height: 100vh;
+  display: flex;
+}
+
+.projects__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects__title {
+  display: inline-block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, hsl(35, 100%, 50%), hsl(180, 60%, 40%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.projects__subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.projects__description {
+  font-size: 1.2rem;
+  color: hsl(220, 30%, 85%);
+  margin-bottom: 3rem;
+}
+
+.projects__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  min-height: 320px;
+  gap: 2rem;
+}
+
+.projects__card {
+  background-color: hsl(30, 100%, 50%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.projects__card:hover {
+  transform: translateY(-10px);
+  background-color: hsl(30, 90%, 45%);
+}
+
+.projects__card-title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(45, 20%, 95%);
+}
+
+.projects__card-description {
+  margin-top: auto;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 0 0 15px 15px;
+  color: hsl(45, 20%, 95%);
+}
+
+.projects__pagination {
+  margin-top: 2rem;
+  color: hsl(220, 30%, 85%);
+  font-size: 1rem;
+}

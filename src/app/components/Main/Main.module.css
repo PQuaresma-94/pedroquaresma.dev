@@ -1,0 +1,88 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(210, 10%, 15%);
+  color: hsl(45, 20%, 95%);
+  padding-top: 80px;
+  height: 100vh;
+}
+
+.main__tech-tags {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main__tech-tag {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: hsl(220, 20%, 20%);
+  color: hsl(45, 20%, 95%);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.main__tech-tag:hover {
+  transform: translateY(-5px);
+  background-color: hsl(35, 100%, 50%);
+  color: black;
+}
+
+.main__intro-text {
+  margin-bottom: 2rem;
+}
+
+.main__intro-title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.main__intro-name {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(
+    to bottom right,
+    hsl(35, 100%, 50%),
+    hsl(180, 60%, 40%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main__intro-description {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  max-width: 600px;
+}
+
+.main__buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.main__button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main__button--get-in-touch {
+  background-color: hsl(35, 100%, 50%);
+  color: black;
+}
+
+.main__button--get-in-touch:hover {
+  background-color: hsl(35, 100%, 45%);
+}
+
+.main__button--learn-more {
+  background-color: hsl(220, 20%, 20%);
+  color: hsl(45, 20%, 95%);
+}
+
+.main__button--learn-more:hover {
+  background-color: hsl(180, 35%, 45%);
+}
