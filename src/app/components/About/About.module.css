@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: hsl(210, 10%, 15%);
   color: hsl(45, 20%, 95%);
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .about__text {

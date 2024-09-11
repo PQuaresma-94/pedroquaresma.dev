@@ -4,6 +4,8 @@
   color: hsl(45, 20%, 95%);
   min-height: 100vh;
   align-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .skills__cards {
@@ -15,11 +17,11 @@
 
 .skills__content {
   text-align: left;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .skills__title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: hsl(45, 20%, 95%);
@@ -50,7 +52,7 @@
 }
 
 .skills__card-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: hsl(45, 20%, 95%);
@@ -65,4 +67,22 @@
 .skills__card-description {
   font-size: 1rem;
   color: hsl(220, 30%, 85%);
+}
+
+@media (max-width: 500px) {
+  .skills__cards {
+    grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+  }
+
+  .skills__card {
+    padding: 1rem;
+  }
+
+  .skills__card-title {
+    font-size: 1rem;
+  }
+
+  .skills__card-description {
+    font-size: 0.8rem;
+  }
 }
