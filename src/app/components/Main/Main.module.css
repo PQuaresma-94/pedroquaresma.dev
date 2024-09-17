@@ -88,10 +88,23 @@
   background-color: hsl(180, 35%, 45%);
 }
 
+/* Tablet */
+
 @media (max-width: 768px) {
   .main__tech-tags {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
+  }
+  .main__buttons {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .main__buttons {
+    justify-content: center;
   }
 }

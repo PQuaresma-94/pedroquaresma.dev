@@ -40,7 +40,7 @@
 
 .projects__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   min-height: 320px;
   gap: 2rem;
 }

@@ -2,7 +2,7 @@ import styles from "./About.module.css";
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <h3 className={styles["about__text"]}>
         I'm a full-stack developer proficient in JavaScript, React, Node.js, and
         Agile Methodologies. My journey from Quality Assurance to software

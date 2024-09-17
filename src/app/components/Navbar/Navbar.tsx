@@ -15,6 +15,14 @@ const Navbar: React.FC = () => {
     setIsDropdownOpen(false);
   };
 
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      closeDropdown();
+    }
+  };
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -37,12 +45,27 @@ const Navbar: React.FC = () => {
     };
 
     const handleOverlayClick = (event: MouseEvent) => {
+      const targetElement = event.target as HTMLElement;
+
+      const navbarTabClass = styles.navbar__tab;
+      const navbarTabsClass = styles.navbar__tabs;
+
       if (
-        !(event.target as HTMLElement).closest(".navbar__icon") &&
-        isDropdownOpen
+        !targetElement.classList.contains(navbarTabClass) &&
+        !targetElement.classList.contains(navbarTabsClass)
       ) {
-        closeDropdown();
+        if (isDropdownOpen) {
+          closeDropdown();
+        }
       }
+    };
+
+    document.addEventListener("keydown", handleEscapeKeyPress);
+    document.addEventListener("mousedown", handleOverlayClick);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKeyPress);
+      document.removeEventListener("mousedown", handleOverlayClick);
     };
 
     document.addEventListener("keydown", handleEscapeKeyPress);
@@ -66,10 +89,30 @@ const Navbar: React.FC = () => {
           isDropdownOpen ? styles.open : ""
         }`}
       >
-        <li className={styles.navbar__tab}>Home</li>
-        <li className={styles.navbar__tab}>About Me</li>
-        <li className={styles.navbar__tab}>Projects</li>
-        <li className={styles.navbar__tab}>Skills</li>
+        <li
+          className={styles.navbar__tab}
+          onClick={(event) => handleScroll("main")}
+        >
+          Home
+        </li>
+        <li
+          className={styles.navbar__tab}
+          onClick={(event) => handleScroll("about")}
+        >
+          About Me
+        </li>
+        <li
+          className={styles.navbar__tab}
+          onClick={(event) => handleScroll("projects")}
+        >
+          Projects
+        </li>
+        <li
+          className={styles.navbar__tab}
+          onClick={(event) => handleScroll("skills")}
+        >
+          Skills
+        </li>
       </ul>
     </nav>
   );

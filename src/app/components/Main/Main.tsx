@@ -2,7 +2,7 @@ import styles from "./Main.module.css";
 
 const Main = () => {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} id="main">
       <div>
         <div className={styles["main__tech-tags"]}>
           <div className={styles["main__tech-tag"]}>React</div>

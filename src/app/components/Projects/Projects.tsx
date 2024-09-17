@@ -2,7 +2,7 @@ import styles from "./Projects.module.css";
 
 const Projects = () => {
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id="projects">
       <div className={styles["projects__container"]}>
         <h1 className={styles["projects__title"]}>✨ Projects</h1>
         <h2 className={styles["projects__subtitle"]}>
