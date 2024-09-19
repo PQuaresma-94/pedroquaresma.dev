@@ -18,7 +18,17 @@ const Navbar: React.FC = () => {
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      if (window.innerWidth < 768) {
+        const topOffset = 60;
+        const elementPosition =
+          element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: elementPosition - topOffset,
+          behavior: "smooth",
+        });
+      } else {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
       closeDropdown();
     }
   };
