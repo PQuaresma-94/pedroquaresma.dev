@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import styles from "./Preloader.module.css"; // Assuming you're using CSS modules
+import styles from "./Preloader.module.css";
 
 const Preloader: React.FC = () => {
   const [currentWord, setCurrentWord] = useState<string>("Hello");
@@ -12,8 +12,8 @@ const Preloader: React.FC = () => {
     "Olá",
     "Hola",
     "Bonjour",
-    "Hallo",
     "Ciao",
+    "Hallo",
     "Konnichiwa",
     "Namaste",
     "Salam",

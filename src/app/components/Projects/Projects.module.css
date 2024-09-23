@@ -40,34 +40,46 @@
 }
 
 .projects__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-  min-height: 320px;
+  display: flex;
+  min-width: 256px;
   gap: 2rem;
 }
 
 .projects__card {
-  background-color: hsl(30, 100%, 50%);
-  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   position: relative;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.projects__card:hover {
+.projects__card-content {
+  background-color: hsl(30, 100%, 50%);
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.projects__card-content:hover {
   transform: translateY(-10px);
   background-color: hsl(30, 90%, 45%);
 }
 
+.projects__card-image {
+  border-radius: 15px 15px 0 0;
+  min-height: auto;
+}
+
 .projects__card-title {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  padding: 1rem;
+  top: 0;
+  left: 0;
   font-size: 1.5rem;
   font-weight: bold;
   color: hsl(45, 20%, 95%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .projects__card-description {
@@ -79,10 +91,46 @@
   color: hsl(45, 20%, 95%);
 }
 
-.projects__pagination {
-  margin-top: 2rem;
-  color: hsl(220, 30%, 85%);
+.projects__card-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+.projects__button {
+  padding: 0.8rem 1.2rem;
   font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: hsl(210, 100%, 45%);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Modifier: projects__button-frontend */
+.projects__button-frontend {
+  background-color: hsl(180, 50%, 45%);
+}
+
+.projects__button-frontend:hover {
+  background-color: hsl(180, 50%, 35%);
+}
+
+/* Modifier: projects__button-backend */
+.projects__button-backend {
+  background-color: hsl(35, 100%, 50%);
+}
+
+.projects__button-backend:hover {
+  background-color: hsl(35, 100%, 40%);
+}
+
+@media (max-width: 768px) {
+  .projects__cards {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 425px) {
