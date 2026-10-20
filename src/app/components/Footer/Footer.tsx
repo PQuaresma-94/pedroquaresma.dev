@@ -40,7 +40,7 @@ const Footer = () => {
           <hr className={styles["footer__divider"]} />
           <span className={styles["footer__time-wrapper"]}>
             <p className={styles["footer__time-label"]}>Local time:</p>
-            <p className={styles["footer__time"]}>{time} UTC+1</p>
+            <p className={styles["footer__time"]}>{time} Pacific Time</p>
           </span>
         </span>
         <Link

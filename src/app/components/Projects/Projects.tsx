@@ -6,11 +6,11 @@ const Projects = () => {
       <div className={styles["projects__container"]}>
         <h1 className={styles["projects__title"]}>✨ Projects</h1>
         <h2 className={styles["projects__subtitle"]}>
-          Streamlined digital experiences.
+          Full-stack projects built with product quality in mind.
         </h2>
         <p className={styles["projects__description"]}>
-          I've worked on a variety of projects, from QA tools to full-stack web
-          applications. Here are some of my favorites:
+          I build practical applications with thoughtful interfaces, secure
+          APIs, and maintainable architecture. Here are two examples:
         </p>
         <div className={styles["projects__cards"]}>
           <div className={styles["projects__card"]}>
@@ -24,8 +24,10 @@ const Projects = () => {
                 Relic Helper App
               </h3>
               <p className={styles["projects__card-description"]}>
-                Developed a web app for Star Wars Galaxy of Heroes players to
-                manage and upgrade their game rosters.
+                A full-stack roster-planning app for Star Wars: Galaxy of
+                Heroes. Built with React, Node.js, Express, MongoDB, and JWT
+                authentication, with lazy loading and optimized state management
+                to improve load times.
               </p>
             </div>
             <div className={styles["projects__card-buttons"]}>
@@ -58,8 +60,10 @@ const Projects = () => {
               />
               <h3 className={styles["projects__card-title"]}>WTWR App</h3>
               <p className={styles["projects__card-description"]}>
-                Built a weather-based clothing recommendation app using a
-                weather API and a user-friendly interface.
+                A weather-based clothing recommendation app using React,
+                Node.js, Express, MongoDB, and a third-party weather API.
+                Includes authenticated accounts and protected routes for a
+                personalized experience.
               </p>
             </div>
             <div className={styles["projects__card-buttons"]}>

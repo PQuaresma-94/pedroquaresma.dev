@@ -5,8 +5,9 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "Personal Portfolio",
+  title: "Pedro Quaresma | Full-Stack Software Engineer",
+  description:
+    "Full-stack software engineer with enterprise QA experience, building reliable applications with React, Node.js, and JavaScript.",
 };
 
 export default function RootLayout({

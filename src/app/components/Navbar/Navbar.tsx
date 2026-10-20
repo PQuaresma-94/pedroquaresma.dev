@@ -77,14 +77,6 @@ const Navbar: React.FC = () => {
       document.removeEventListener("keydown", handleEscapeKeyPress);
       document.removeEventListener("mousedown", handleOverlayClick);
     };
-
-    document.addEventListener("keydown", handleEscapeKeyPress);
-    document.addEventListener("mousedown", handleOverlayClick);
-
-    return () => {
-      document.removeEventListener("keydown", handleEscapeKeyPress);
-      document.removeEventListener("mousedown", handleOverlayClick);
-    };
   }, [isDropdownOpen]);
 
   return (
@@ -101,25 +93,25 @@ const Navbar: React.FC = () => {
       >
         <li
           className={styles.navbar__tab}
-          onClick={(event) => handleScroll("main")}
+          onClick={() => handleScroll("main")}
         >
           Home
         </li>
         <li
           className={styles.navbar__tab}
-          onClick={(event) => handleScroll("about")}
+          onClick={() => handleScroll("about")}
         >
           About Me
         </li>
         <li
           className={styles.navbar__tab}
-          onClick={(event) => handleScroll("projects")}
+          onClick={() => handleScroll("projects")}
         >
           Projects
         </li>
         <li
           className={styles.navbar__tab}
-          onClick={(event) => handleScroll("skills")}
+          onClick={() => handleScroll("skills")}
         >
           Skills
         </li>
