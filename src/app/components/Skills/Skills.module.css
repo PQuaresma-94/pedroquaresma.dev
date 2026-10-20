@@ -1,8 +1,8 @@
 .skills {
-  padding: 2rem 2rem;
+  padding: 6rem 2rem;
   background-color: hsl(210, 10%, 15%);
   color: hsl(45, 20%, 95%);
-  min-height: 100vh;
+  min-height: 72vh;
   align-content: center;
   max-width: 1400px;
   margin: 0 auto;
@@ -10,14 +10,15 @@
 
 .skills__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(452px, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
   align-content: center;
 }
 
 .skills__content {
   text-align: left;
-  margin-bottom: 2rem;
+  align-self: center;
+  margin-bottom: 0;
 }
 
 .skills__title {
@@ -40,19 +41,20 @@
 
 .skills__card {
   background-color: hsl(210, 15%, 20%);
-  padding: 2rem;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
+  border: 1px solid rgba(245, 242, 238, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-height: 312px;
 }
 
 .skills__card:hover {
-  transform: translateY(-3px);
+  border-color: rgba(37, 167, 157, 0.7);
+  transform: translateY(-4px);
 }
 
 .skills__card-title {
-  font-size: 2rem;
+  font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: hsl(45, 20%, 95%);
@@ -71,7 +73,7 @@
 
 @media (max-width: 500px) {
   .skills__cards {
-    grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .skills__card {

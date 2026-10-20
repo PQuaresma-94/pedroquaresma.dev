@@ -3,6 +3,7 @@ import styles from "./About.module.css";
 const About = () => {
   return (
     <section className={styles.about} id="about">
+      <p className={styles["about__eyebrow"]}>Why work with me</p>
       <h3 className={styles["about__text"]}>
         I combine full-stack development skills in JavaScript, React, Node.js,
         and Express with hands-on quality assurance experience. At Talkdesk, I

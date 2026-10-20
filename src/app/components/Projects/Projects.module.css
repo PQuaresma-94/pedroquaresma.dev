@@ -1,6 +1,7 @@
 .projects {
-  padding: 3rem 0;
-  background-color: hsl(210, 10%, 15%);
+  padding: 6rem 0;
+  background:
+    linear-gradient(180deg, hsl(210, 10%, 15%), hsl(215, 16%, 13%));
   color: hsl(45, 20%, 95%);
   min-height: 100vh;
   display: flex;
@@ -40,7 +41,8 @@
 }
 
 .projects__cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   min-width: 256px;
   gap: 2rem;
 }
@@ -49,46 +51,47 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  min-width: 0;
+  transition: transform 0.2s ease;
 }
 
 .projects__card-content {
-  background-color: hsl(30, 100%, 50%);
+  background-color: hsl(220, 20%, 20%);
+  border: 1px solid rgba(245, 242, 238, 0.1);
   border-radius: 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .projects__card-content:hover {
-  transform: translateY(-10px);
-  background-color: hsl(30, 90%, 45%);
+  transform: translateY(-5px);
+  border-color: rgba(37, 167, 157, 0.7);
 }
 
 .projects__card-image {
+  display: block;
+  aspect-ratio: 16 / 8;
+  width: 100%;
+  object-fit: cover;
   border-radius: 15px 15px 0 0;
   min-height: auto;
 }
 
 .projects__card-title {
-  position: absolute;
-  padding: 1rem;
-  top: 0;
-  left: 0;
+  position: static;
+  padding: 1.25rem 1.25rem 0;
   font-size: 1.5rem;
   font-weight: bold;
   color: hsl(45, 20%, 95%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .projects__card-description {
-  margin-top: auto;
+  margin: 0;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  border-radius: 0 0 15px 15px;
-  color: hsl(45, 20%, 95%);
+  line-height: 1.55;
+  padding: 0.75rem 1.25rem 1.25rem;
+  color: hsl(220, 30%, 85%);
 }
 
 .projects__card-buttons {
@@ -129,7 +132,7 @@
 
 @media (max-width: 768px) {
   .projects__cards {
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
   }
 }
 
