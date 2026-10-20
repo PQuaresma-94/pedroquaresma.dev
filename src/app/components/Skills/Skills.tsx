@@ -6,8 +6,8 @@ const Skills = () => {
       <div className={styles["skills__cards"]}>
         <div className={styles["skills__content"]}>
           <h1 className={styles["skills__title"]}>
-            Engineering skills, <br />
-            <span className={styles["skills__highlight"]}>quality mindset.</span>
+            How I build, <br />
+            <span className={styles["skills__highlight"]}>test, and collaborate.</span>
           </h1>
           <p className={styles["skills__description"]}>
             I bring experience across product development, API integrations,

@@ -111,6 +111,12 @@ const Navbar: React.FC = () => {
         </li>
         <li
           className={styles.navbar__tab}
+          onClick={() => handleScroll("experience")}
+        >
+          Experience
+        </li>
+        <li
+          className={styles.navbar__tab}
           onClick={() => handleScroll("skills")}
         >
           Skills
