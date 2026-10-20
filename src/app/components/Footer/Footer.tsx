@@ -44,14 +44,14 @@ const Footer = () => {
           </span>
         </span>
         <Link
-          href="mailto:pedromquaresma@gmail.com"
+          href="mailto:pedromcbquaresma.work@gmail.com"
           passHref
           className={styles["footer__email-link"]}
         >
           <button className={styles["footer__button"]}>
             <MailIcon className={styles["footer__icon"]} />
             <span className={styles["footer__email"]}>
-              pedromquaresma@gmail.com
+              pedromcbquaresma.work@gmail.com
             </span>
           </button>
         </Link>

@@ -25,7 +25,7 @@ const Main = () => {
           </p>
         </div>
         <div className={styles["main__buttons"]}>
-          <Link href="mailto:pedromquaresma@gmail.com" passHref>
+          <Link href="mailto:pedromcbquaresma.work@gmail.com" passHref>
             <button
               className={`${styles["main__button"]} ${styles["main__button--get-in-touch"]}`}
             >
